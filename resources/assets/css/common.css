@@ -844,6 +844,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    position: relative;
 }
 
 .date-group label {
