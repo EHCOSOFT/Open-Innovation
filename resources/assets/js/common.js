@@ -66,5 +66,9 @@ $(document).ready(function () {
     $(".modal-content").click(function (e) {
         e.stopPropagation();
     });
+
+    $(".btn-zone").click(function() {
+        $(this).toggleClass("active");
+    })
 });
 

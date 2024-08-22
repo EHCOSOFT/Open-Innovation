@@ -343,19 +343,29 @@ h2 {
     display: none;
     flex-direction: column;
     height: 100vh;
+    overflow: scroll;
     gap: 24px;
     padding: 20px;
     width: 240px;
 }
 
+.menu-layer::-webkit-scrollbar {
+    background: none;
+    width: 4px;
+}
+
+.menu-layer::-webkit-scrollbar-thumb {
+    background: var(--black-300);
+    border-radius: 100px;
+}
 .menu-layer.active {
     display: flex;
 }
 
 .menu-layer h3 {
     color: var(--black);
-    font-size: var(--text-lg);
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .btn-menu-close {
@@ -603,15 +613,23 @@ h2 {
 
 .check-wrap h4 {
     color: var(--black-950);
-    font-size: var(--text-md);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.check-wrap h5 {
+    color: var(--black-950);
+    font-size: 16px;
     font-weight: 500;
     text-align: left;
 }
 
+
 .check-area {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
 }
 
 .check-group {
@@ -626,7 +644,7 @@ h2 {
 .check-group label {
     align-items: center;
     color: var(--black-800);
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
     display: flex;
     gap: 8px;
 }
@@ -637,8 +655,8 @@ h2 {
     content: '';
     flex: 0 0 auto;
     display: inline-block;
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
 }
 
 .check-group input:checked+label::before {
@@ -851,11 +869,11 @@ input::placeholder {
     align-items: center;
     color: var(--black-900);
     display: flex;
-    font-size: 15px;
+    font-size: 16px;
     justify-content: space-between;
 }
 
-.date-group input {
+.date-group input[type=date] {
     -webkit-appearance: none;
     /* safari */
     align-items: center;
@@ -883,6 +901,44 @@ input::placeholder {
 }
 
 .date-group input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+
+.date-group input[type=time] {
+    -webkit-appearance: none;
+    /* safari */
+    align-items: center;
+    background: url(../img/ico/i-time.png) no-repeat 50%/24px;
+    background-position: right 12px center;
+    border: 1px solid var(--black-100);
+    border-radius: 0.5rem;
+    color: var(--black-900);
+    /* display: flex; */
+    font-size: var(--text-md);
+    font-weight: 400;
+    justify-content: flex-start;
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.date-group input[type="time"]::-webkit-datetime-edit-text,
+.date-group input[type="time"]::-webkit-datetime-edit-month-field,
+.date-group input[type="time"]::-webkit-datetime-edit-day-field,
+.date-group input[type="time"]::-webkit-datetime-edit-year-field {
+    -webkit-appearance: none;
+    /* display: none; */
+}
+
+.date-group input[type="time"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
     height: 100%;
     left: 0;
@@ -1056,97 +1112,60 @@ input::placeholder {
 }
 
 .modal-footer {
-    justify-content: flex-end;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-footer button {
+    width: 200px;
 }
 
 @media (min-width:992px) {
     .modal-body .input-wrap {
         gap: 1rem;
     }
+
     .modal-body .check-area {
         flex-direction: row;
         gap: 20px;
     }
 }
-/* switch */
-.switch-area {
-    display: flex;
-    justify-content: center;
-    position: relative;
+
+
+.zone-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 70px;
-    height: 30px;
+.zone-group .btn-zone {
+    background: none;
+    border-radius: 0;
+    border: 1px solid var(--black-200);
+    color: var(--black-600);
+    font-size: 18px;
+    font-weight: 600;
+    height: 48px;
+    margin: -1px 0 0 -1px;
 }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+.zone-group .btn-zone.active {
+    background: var(--red);
+    color: var(--white);
 }
 
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #CE1B2B;
-    transition: .4s;
+.zone-group button:first-child {
+    border-radius: 12px 0 0 0;
 }
 
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 5px;
-    bottom: 5px;
-    background-color: white;
-    transition: .4s;
+.zone-group button:nth-child(4) {
+    border-radius: 0 12px 0 0;
 }
 
-input:checked+.slider {
-    background: #00D6AD;
+.zone-group button:nth-child(13) {
+    border-radius: 0 0 0 12px;
 }
 
-input:checked+.slider:before {
-    transform: translateX(40px);
-}
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
-}
-
-.switch-text {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    padding: 0 8px;
-    left: 0;
-}
-
-.switch input:checked+.slider .switch-text.off {
-    display: none;
-}
-
-.switch input:not(:checked)+.slider .switch-text {
-    text-align: right;
-}
-
-.switch input:not(:checked)+.slider .switch-text.on {
-    display: none;
+.zone-group button:last-child {
+    border-radius: 0 0 12px 0;
 }

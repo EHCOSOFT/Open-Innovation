@@ -40,11 +40,11 @@
                         <i class="ico i-icon-03"></i>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#" data-target="#nav-04">
                         <i class="ico i-icon-04"></i>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="#" data-target="#nav-05">
                         <i class="ico i-icon-05"></i>
@@ -105,27 +105,31 @@
                     <div class="check-area">
                         <div class="check-group">
                             <input type="checkbox" id="check01">
-                            <label for="check01">파고</label>
+                            <label for="check01">파고(Wave Height)</label>
                         </div>
                         <div class="check-group">
                             <input type="checkbox" id="check02">
-                            <label for="check02">파주기</label>
+                            <label for="check02">파주기(Wave period)</label>
                         </div>
                         <div class="check-group">
                             <input type="checkbox" id="check03">
-                            <label for="check03">파향</label>
+                            <label for="check03">파향 (Wave direction)</label>
                         </div>
                         <div class="check-group">
                             <input type="checkbox" id="check04">
-                            <label for="check04">바람</label>
+                            <label for="check04">풍속 (Wind speed)</label>
                         </div>
                         <div class="check-group">
                             <input type="checkbox" id="check05">
-                            <label for="check05">유향</label>
+                            <label for="check05">풍향 (Wind direction)</label>
                         </div>
                         <div class="check-group">
                             <input type="checkbox" id="check06">
-                            <label for="check06">유속</label>
+                            <label for="check06">유속 (Current speed)</label>
+                        </div>
+                        <div class="check-group">
+                            <input type="checkbox" id="check07">
+                            <label for="check07">유향 (Current direction)</label>
                         </div>
                     </div>
                 </div>
@@ -143,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div class="menu-layer" id="nav-04">
+            <!-- <div class="menu-layer" id="nav-04">
                 <h3>선박 항적 조회</h3>
                 <div class="date-area">
                     <div class="date-group">
@@ -159,12 +163,30 @@
                         <button type="button" class="btn btn-md btn-primary">조회</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="menu-layer" id="nav-05">
                 <h3>CCTV</h3>
                 <div class="date-area">
                     <div class="date-group">
                         <label for="">울릉도</label>
+                        <div class="zone-group">
+                            <button type="button" class="btn btn-zone">1</button>
+                            <button type="button" class="btn btn-zone">2</button>
+                            <button type="button" class="btn btn-zone">3</button>
+                            <button type="button" class="btn btn-zone">4</button>
+                            <button type="button" class="btn btn-zone">5</button>
+                            <button type="button" class="btn btn-zone">6</button>
+                            <button type="button" class="btn btn-zone">7</button>
+                            <button type="button" class="btn btn-zone">8</button>
+                            <button type="button" class="btn btn-zone">9</button>
+                            <button type="button" class="btn btn-zone">10</button>
+                            <button type="button" class="btn btn-zone">11</button>
+                            <button type="button" class="btn btn-zone">12</button>
+                            <button type="button" class="btn btn-zone">13</button>
+                            <button type="button" class="btn btn-zone">14</button>
+                            <button type="button" class="btn btn-zone">15</button>
+                            <button type="button" class="btn btn-zone">16</button>
+                        </div>
                         <button type="button" class="btn btn-md btn-gray open-modal" data-modal-id="cctvModal">확인</button>
                     </div>
                     <div class="date-group">
@@ -177,17 +199,45 @@
                 <h3>로그추출</h3>
                 <div class="date-area">
                     <div class="date-group">
-                        <label for="">해양기상정보</label>
-                        <input type="date">
-                        <input type="date">
-                        <button type="button" class="btn btn-md btn-primary">조회</button>
-                    </div>
-                    <div class="date-group">
                         <label for="">해양관측정보</label>
                         <input type="date">
-                        <input type="date">
-                        <button type="button" class="btn btn-md btn-primary">조회</button>
+                        <input type="time">
+                        
                     </div>
+                    <div class="check-wrap">
+                        <h5>표출 정보 선택</h5>
+                        <div class="check-area">
+                            <div class="check-group">
+                                <input type="checkbox" id="check01">
+                                <label for="check01">파고(Wave Height)</label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="check02">
+                                <label for="check02">파주기(Wave period)</label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="check03">
+                                <label for="check03">파향 (Wave direction)</label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="check04">
+                                <label for="check04">풍속 (Wind speed)</label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="check05">
+                                <label for="check05">풍향 (Wind direction)</label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="check06">
+                                <label for="check06">유속 (Current speed)</label>
+                            </div>
+                            <div class="check-group">
+                                <input type="checkbox" id="check07">
+                                <label for="check07">유향 (Current direction)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-md btn-primary open-modal" data-modal-id="graphModal">조회</button>
                 </div>
             </div>
             <button type="button" class="btn-menu-close">
@@ -210,6 +260,22 @@
         </div>
     </div>
     <!-- END : cctvModal -->
+
+    <!-- START : graphModal -->
+    <div id="graphModal" class="modal-wrap active">
+        <div class="modal-inner">
+            <div class="modal-content">
+                <div class="modal-body">
+                    dd
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-md btn-primary">내보내기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END : graphModal -->
 
     <script src="lib/jquery.min.js"></script>
     <script src="js/common.js"></script>
