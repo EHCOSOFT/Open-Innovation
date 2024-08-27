@@ -178,3 +178,13 @@
     height: 400px;
     width: 100%;
 }
+
+.no-date {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.no-date p {
+    color: var(--black-800);
+    font-size: var(--text-md);
+}

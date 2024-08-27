@@ -1178,7 +1178,7 @@ input::placeholder {
     border-radius: 0 12px 0 0;
 }
 
-.zone-group button:nth-child(13) {
+.zone-group button:nth-last-child(4) {
     border-radius: 0 0 0 12px;
 }
 
