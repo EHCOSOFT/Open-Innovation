@@ -164,6 +164,7 @@
 .btn-add-location {
     width: 80px;
 }
+
 .add-location {
     align-items: center;
     color: var(--black-800);
@@ -171,4 +172,9 @@
     display: flex;
     gap: 4px;
     line-height: 20px;
+}
+
+.cctv-wrap {
+    height: 400px;
+    width: 100%;
 }
