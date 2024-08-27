@@ -99,6 +99,11 @@
     padding: 8px;
 }
 
+.set-body table tr.no-content td {
+    padding: 20px 0;
+    text-align: center;
+}
+
 .login-wrap {
     align-items: center;
     background: #F9FBFF;
@@ -141,5 +146,29 @@
     .login {
         padding: 40px;
     }
+}
 
+.user-info-modal .check-wrap h4 {
+    align-items: center;
+    color: var(--black-900);
+    display: flex;
+    font-size: var(--text-md);
+    font-weight: 500;
+    gap: 2px;
+}
+
+.user-info-modal .check-group label {
+    font-size: var(--text-md);
+}
+
+.btn-add-location {
+    width: 80px;
+}
+.add-location {
+    align-items: center;
+    color: var(--black-800);
+    font-size: var(--text-md);
+    display: flex;
+    gap: 4px;
+    line-height: 20px;
 }

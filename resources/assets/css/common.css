@@ -456,7 +456,11 @@ h2 {
     border: 1px solid var(--primary);
     background: none;
     color: var(--primary);
-    ;
+}
+
+.btn-outline-primary.active {
+    background: var(--primary);
+    color: var(--white);
 }
 
 .btn-black {
@@ -494,6 +498,11 @@ h2 {
     display: inline-block;
 }
 
+.i-plus {
+    background: url(../img/ico/i-plus.png);
+    height: 16px;
+    width: 16px;
+}
 .i-menu {
     background: url(../img/ico/i-menu.png);
     height: 24px;
@@ -602,6 +611,12 @@ h2 {
     width: 20px;
 }
 
+.i-chevron-left-b {
+    background: url(../img/ico/i-chevron-left-b.png);
+    height: 16px;
+    width: 16px;
+}
+
 /* **************************************** *
  * input
  * **************************************** */
@@ -624,7 +639,6 @@ h2 {
     font-weight: 500;
     text-align: left;
 }
-
 
 .check-area {
     display: flex;
@@ -1036,6 +1050,8 @@ input::placeholder {
     display: flex;
     height: 100%;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 90%;
     width: 100%;
 }
 
@@ -1168,4 +1184,52 @@ input::placeholder {
 
 .zone-group button:last-child {
     border-radius: 0 0 12px 0;
+}
+
+
+/* **************************************** *
+ * Pagination
+ * **************************************** */
+ .pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0 0;
+}
+
+.pagination li {
+    align-items: center;
+    display: flex;
+}
+
+.pagination li a {
+    align-items: center;
+    color: var(--black-600);
+    font-size: var(--text-md);
+    font-weight: 500;
+    display: flex;
+    height: 28px;
+    justify-content: center;
+    width: 28px;
+}
+
+.pagination li.active a {
+    background: var(--primary);
+    border-radius: 100px;
+    color: var(--white);
+}
+
+.pagination li.disabled {
+    opacity: 0.5;
+}
+
+.pagination li:first-child {
+    margin: 0 8px 0 0;
+}
+
+.pagination li:last-child {
+    margin: 0 0 0 8px;
+}
+
+.pagination li:last-child i {
+    transform: rotate(180deg);
 }

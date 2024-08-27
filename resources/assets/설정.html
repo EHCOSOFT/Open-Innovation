@@ -206,7 +206,7 @@
                     <table>
                         <colgroup>
                             <col style="width: auto;">
-                            <col style="width: 80px;">
+                            <col style="width: 200px;">
                             <col style="width: 120px;">
                         </colgroup>
                         <thead>
@@ -220,8 +220,8 @@
                             <tr>
                                 <td>mkjh1216</td>
                                 <td>
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-primary">잠금해제</button>
+                                    <div class="btn-group horizontal">
+                                        <button type="button" class="btn btn-sm btn-outline-primary" id="btn-lock">잠금</button>
                                     </div>
                                 </td>
                                 <td>
@@ -232,8 +232,20 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr class="no-content">
+                                <td colspan="3">사용자가 없습니다.</td>
+                            </tr>
                         </tbody>
                     </table>
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#"><i class="ico i-chevron-left-b"></i></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="ico i-chevron-left-b"></i></a></li>
+                    </ul>
                 </div>
             </section>
         </main>
@@ -318,7 +330,7 @@
     <!-- END : userRegModal -->
 
     <!-- START : userInfoChangeModal -->
-    <div id="userInfoChangeModal" class="modal-wrap">
+    <div id="userInfoChangeModal" class="modal-wrap user-info-modal">
         <div class="modal-inner">
             <div class="modal-content">
                 <div class="modal-header">
@@ -348,11 +360,22 @@
                             <input type="password" placeholder="새 비밀번호를 재입력해주세요.">
                             <small>비밀번호가 동일하지 않습니다.</small>
                         </div>
-                        <div class="select-group">
+                        <!-- <div class="select-group">
                             <label for="위치">위치</label>
                             <select name="" id="">
                                 <option value="속초">속초</option>
                             </select>
+                        </div> -->
+                        <!-- 20240827 수정사항 -->
+                        <div class="input-group">
+                            <label for="">위치</label>
+                            <div class="input-area horizontal">
+                                <input type="text" placeholder="장소명">
+                                <input type="text" placeholder="위도">
+                                <input type="text" placeholder="경도">
+                                <button type="button" class="btn btn-sm btn-gray btn-add-location">저장</button>
+                            </div>
+                            <a href="#" class="add-location"><i class="ico i-plus"></i>위치추가</a>
                         </div>
                         <div class="check-wrap">
                             <h4>표출정보선택</h4>
