@@ -253,7 +253,7 @@
     </div>
 
     <!-- START : userRegModal -->
-    <div id="userRegModal" class="modal-wrap">
+    <div id="userRegModal" class="modal-wrap user-info-modal">
         <div class="modal-inner">
             <div class="modal-content">
                 <div class="modal-header">
@@ -282,38 +282,49 @@
                             <input type="password" placeholder="비밀번호를 재입력해주세요.">
                             <small>비밀번호가 동일하지 않습니다.</small>
                         </div>
-                        <div class="select-group">
-                            <label for="위치">위치</label>
-                            <select name="" id="">
-                                <option value="속초">속초</option>
-                            </select>
-                        </div>
                         <div class="check-wrap">
                             <h4>표출정보선택</h4>
                             <div class="check-area">
                                 <div class="check-group">
                                     <input type="checkbox" id="check11">
-                                    <label for="check11">파고</label>
+                                    <label for="check11">파고(Wave Height)</label>
                                 </div>
                                 <div class="check-group">
                                     <input type="checkbox" id="check12">
-                                    <label for="check12">파주기</label>
+                                    <label for="check12">파주기(Wave period)</label>
                                 </div>
                                 <div class="check-group">
                                     <input type="checkbox" id="check13">
-                                    <label for="check13">파향</label>
+                                    <label for="check13">파향 (Wave direction)</label>
                                 </div>
                                 <div class="check-group">
                                     <input type="checkbox" id="check14">
-                                    <label for="check14">바람</label>
+                                    <label for="check14">풍속 (Wind speed)</label>
                                 </div>
                                 <div class="check-group">
                                     <input type="checkbox" id="check15">
-                                    <label for="check15">유향</label>
+                                    <label for="check15">풍향 (Wind direction)</label>
                                 </div>
                                 <div class="check-group">
                                     <input type="checkbox" id="check16">
-                                    <label for="check16">유속</label>
+                                    <label for="check16">유속 (Current speed)</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check17">
+                                    <label for="check17">유향 (Current direction)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="">위치<a href="#" class="add-location"><i class="ico i-plus"></i>위치추가</a></label>
+                            <div class="check-area">
+                                <div class="check-group">
+                                    <input type="checkbox" id="check20">
+                                    <label for="check20">파고</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check21">
+                                    <label for="check21">파주기</label>
                                 </div>
                             </div>
                         </div>
@@ -368,6 +379,40 @@
                             </select>
                         </div> -->
                         <!-- 20240827 수정사항 -->
+
+                        <div class="check-wrap">
+                            <h4>표출정보선택</h4>
+                            <div class="check-area">
+                                <div class="check-group">
+                                    <input type="checkbox" id="check11">
+                                    <label for="check11">파고(Wave Height)</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check12">
+                                    <label for="check12">파주기(Wave period)</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check13">
+                                    <label for="check13">파향 (Wave direction)</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check14">
+                                    <label for="check14">풍속 (Wind speed)</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check15">
+                                    <label for="check15">풍향 (Wind direction)</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check16">
+                                    <label for="check16">유속 (Current speed)</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check17">
+                                    <label for="check17">유향 (Current direction)</label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="input-group">
                             <label for="">위치<a href="#" class="add-location"><i class="ico i-plus"></i>위치추가</a></label>
                             <div class="check-area">
@@ -378,36 +423,6 @@
                                 <div class="check-group">
                                     <input type="checkbox" id="check21">
                                     <label for="check21">파주기</label>
-                                </div>
-                            </div>
-                        
-                        </div>
-                        <div class="check-wrap">
-                            <h4>표출정보선택</h4>
-                            <div class="check-area">
-                                <div class="check-group">
-                                    <input type="checkbox" id="check11">
-                                    <label for="check11">파고</label>
-                                </div>
-                                <div class="check-group">
-                                    <input type="checkbox" id="check12">
-                                    <label for="check12">파주기</label>
-                                </div>
-                                <div class="check-group">
-                                    <input type="checkbox" id="check13">
-                                    <label for="check13">파향</label>
-                                </div>
-                                <div class="check-group">
-                                    <input type="checkbox" id="check14">
-                                    <label for="check14">바람</label>
-                                </div>
-                                <div class="check-group">
-                                    <input type="checkbox" id="check15">
-                                    <label for="check15">유향</label>
-                                </div>
-                                <div class="check-group">
-                                    <input type="checkbox" id="check16">
-                                    <label for="check16">유속</label>
                                 </div>
                             </div>
                         </div>
