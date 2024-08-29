@@ -91,10 +91,15 @@ $(document).ready(function () {
         // 추가할 새로운 HTML 요소
         var newInputArea = `
         <div class="input-area horizontal">
+            <div class="input-area">
             <input type="text" placeholder="장소명">
             <input type="text" placeholder="위도">
             <input type="text" placeholder="경도">
-            <button type="button" class="btn btn-sm btn-gray btn-add-location">저장</button>
+            </div>
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-primary btn-add-location">저장</button>
+            <button type="button" class="btn btn-sm btn-gray btn-del">삭제</button>
+            </div>
         </div>
     `;
 

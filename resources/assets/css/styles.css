@@ -169,8 +169,41 @@
     margin: 0 0 0 auto;
 }
 
+.user-info-modal .input-area.horizontal {
+    flex-direction: column;
+}
+
+.user-info-modal .input-area {
+    flex-direction: row;
+    gap: 8px;
+}
+
+.user-info-modal .btn-group {
+    flex-direction: row;
+}
+
+.user-info-modal .btn-group>button {
+    flex: 1;
+}
+
+@media (min-width:992px) {
+    .user-info-modal .input-area.horizontal {
+        flex-direction: row;
+    }
+
+    .user-info-modal .btn-group {
+        width: 160px;
+    }
+}
+
 .btn-add-location {
-    width: 80px;
+    height: 42px;
+    width: 60px;
+}
+
+.btn-del {
+    height: 42px;
+    width: 60px;
 }
 
 .add-location {

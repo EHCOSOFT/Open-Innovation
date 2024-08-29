@@ -394,6 +394,10 @@ h2 {
     .menu-layer {
         width: 260px;
     }
+
+    .menu-layer .btn-group button {
+        font-size: 14px;
+    }
 }
 
 .wrap {
@@ -477,6 +481,7 @@ h2 {
 
 .btn-gray {
     background: var(--black-200);
+    border: 1px solid var(--black-200);
     color: var(--white);
 }
 
@@ -487,6 +492,7 @@ h2 {
 
 .btn-darkgray {
     background: var(--black-800);
+    border: 1px solid var(--black-800);
     color: var(--white);
 }
 
