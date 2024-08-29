@@ -221,7 +221,8 @@
                                 <td>mkjh1216</td>
                                 <td>
                                     <div class="btn-group horizontal">
-                                        <button type="button" class="btn btn-sm btn-outline-primary" id="btn-lock">잠금</button>
+                                        <button type="button" class="btn btn-sm btn-outline-primary"
+                                            id="btn-lock">잠금</button>
                                     </div>
                                 </td>
                                 <td>
@@ -368,14 +369,18 @@
                         </div> -->
                         <!-- 20240827 수정사항 -->
                         <div class="input-group">
-                            <label for="">위치</label>
-                            <div class="input-area horizontal">
-                                <input type="text" placeholder="장소명">
-                                <input type="text" placeholder="위도">
-                                <input type="text" placeholder="경도">
-                                <button type="button" class="btn btn-sm btn-gray btn-add-location">저장</button>
+                            <label for="">위치<a href="#" class="add-location"><i class="ico i-plus"></i>위치추가</a></label>
+                            <div class="check-area">
+                                <div class="check-group">
+                                    <input type="checkbox" id="check20">
+                                    <label for="check20">파고</label>
+                                </div>
+                                <div class="check-group">
+                                    <input type="checkbox" id="check21">
+                                    <label for="check21">파주기</label>
+                                </div>
                             </div>
-                            <a href="#" class="add-location"><i class="ico i-plus"></i>위치추가</a>
+                        
                         </div>
                         <div class="check-wrap">
                             <h4>표출정보선택</h4>
