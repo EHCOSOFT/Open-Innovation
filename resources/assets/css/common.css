@@ -442,6 +442,10 @@ h2 {
     justify-content: center;
 }
 
+.btn-mn {
+    padding: 4px 8px;
+}
+
 .btn-sm {
     padding: 8px 12px;
 }
@@ -624,6 +628,12 @@ h2 {
     width: 20px;
 }
 
+.i-pencil {
+    background: url(../img/ico/i-pencil.png);
+    height: 16px;
+    width: 16px;
+}
+
 .i-chevron-left-b {
     background: url(../img/ico/i-chevron-left-b.png);
     height: 16px;
@@ -674,6 +684,11 @@ h2 {
     font-size: var(--text-lg);
     display: flex;
     gap: 8px !important;
+}
+
+.check-group button {
+    flex: 0 0 auto;
+    margin: 0 0 0 8px;
 }
 
 .check-group label::before {
