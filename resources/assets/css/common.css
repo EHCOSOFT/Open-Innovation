@@ -691,6 +691,13 @@ h2 {
     background-size: cover;
 }
 
+.check-wrap small {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
 /* select */
 .select-group {
     display: flex;
