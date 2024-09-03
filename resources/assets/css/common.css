@@ -905,6 +905,10 @@ input::placeholder {
 }
 
 /* date */
+.area {
+    position: relative;
+    width: 100%;
+}
 .date-area {
     display: flex;
     flex-direction: column;
