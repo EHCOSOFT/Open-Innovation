@@ -343,14 +343,15 @@ h2 {
     display: none;
     flex-direction: column;
     height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
     gap: 24px;
-    padding: 20px;
+    padding: 20px 12px;
     width: 240px;
 }
 
 .menu-layer::-webkit-scrollbar {
     background: none;
+    height: 4px;
     width: 4px;
 }
 
@@ -358,6 +359,7 @@ h2 {
     background: var(--black-300);
     border-radius: 100px;
 }
+
 .menu-layer.active {
     display: flex;
 }
@@ -392,7 +394,8 @@ h2 {
     }
 
     .menu-layer {
-        width: 260px;
+        padding: 24px;
+        width: 300px;
     }
 
     .menu-layer .btn-group button {
@@ -513,6 +516,7 @@ h2 {
     height: 16px;
     width: 16px;
 }
+
 .i-menu {
     background: url(../img/ico/i-menu.png);
     height: 24px;
@@ -908,6 +912,16 @@ input::placeholder {
     position: relative;
 }
 
+.date-area.horizontal {
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.date-area.horizontal span {
+    display: none;
+}
+
 .date-group {
     display: flex;
     flex-direction: column;
@@ -965,7 +979,7 @@ input::placeholder {
     -webkit-appearance: none;
     /* safari */
     align-items: center;
-    background: url(../img/ico/i-time.png) no-repeat 50%/24px;
+    background: url(../img/ico/i-time.png) no-repeat 50%/20px;
     background-position: right 12px center;
     border: 1px solid var(--black-100);
     border-radius: 0.5rem;
@@ -975,7 +989,7 @@ input::placeholder {
     font-weight: 400;
     justify-content: flex-start;
     max-width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem;
     text-align: left;
     width: 100%;
 }
@@ -997,6 +1011,18 @@ input::placeholder {
     top: 0;
     width: 100%;
     z-index: 3;
+}
+
+@media (min-width:768px) {
+    .date-area.horizontal {
+        align-items: center;
+        flex-direction: row;
+        gap: 4px;
+    }
+
+    .date-area.horizontal span {
+        display: block;
+    }
 }
 
 /* card */
@@ -1228,7 +1254,7 @@ input::placeholder {
 /* **************************************** *
  * Pagination
  * **************************************** */
- .pagination {
+.pagination {
     display: flex;
     justify-content: center;
     margin: 20px 0 0 0;
