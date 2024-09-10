@@ -343,6 +343,7 @@ h2 {
     display: none;
     flex-direction: column;
     height: 100vh;
+    overflow-x: hidden;
     overflow-y: scroll;
     gap: 24px;
     padding: 20px 12px;
@@ -381,6 +382,13 @@ h2 {
     right: -40px;
 }
 
+@media (min-width: 768px) {
+    .menu-layer {
+        padding: 24px;
+        width: 340px;
+    }
+}
+
 @media (min-width: 992px) {
     .navbar {
         display: flex;
@@ -391,11 +399,6 @@ h2 {
 
     .navbar .btn-menu-close {
         display: none;
-    }
-
-    .menu-layer {
-        padding: 24px;
-        width: 340px;
     }
 
     .menu-layer .btn-group button {
@@ -892,11 +895,12 @@ input::placeholder {
 
 @media (min-width:992px) {
     .radio-group label img {
-        height: 60px;
+        height: 80px;
     }
 
     .radio-group .map {
         padding: 16px;
+        gap: 12px;
     }
 
     .radio-group .map p {
@@ -909,6 +913,7 @@ input::placeholder {
     position: relative;
     width: 100%;
 }
+
 .date-area {
     display: flex;
     flex-direction: column;
